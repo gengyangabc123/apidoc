@@ -1,0 +1,3979 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "hyperf swagger api desc",
+        "version": "1.0.0",
+        "title": "HYPERF API DOC"
+    },
+    "schemes": [
+        "http"
+    ],
+    "tags": [
+        {
+            "name": "资源通用功能相关接口",
+            "description": "粉丝画像等"
+        },
+        {
+            "name": "资源微博渠道相关接口",
+            "description": "资源列表"
+        },
+        {
+            "name": "资源微信渠道相关接口",
+            "description": "资源列表"
+        },
+        {
+            "name": "资源抖音渠道相关接口",
+            "description": "资源列表"
+        },
+        {
+            "name": "资源小红书渠道相关接口",
+            "description": "资源列表"
+        },
+        {
+            "name": "资源快手渠道相关接口",
+            "description": "资源列表"
+        },
+        {
+            "name": "资源B站渠道相关接口",
+            "description": "资源列表"
+        }
+    ],
+    "definitions": {
+        "ModelArray": {
+            "type": "array",
+            "required": [],
+            "items": {
+                "type": "string"
+            }
+        },
+        "ModelObject": {
+            "type": "object",
+            "required": [],
+            "items": {
+                "type": "string"
+            }
+        },
+        "PostAccountAllFansTrend": {
+            "type": "object",
+            "properties": {
+                "accountUid": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "账户id"
+                },
+                "channel": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "资源渠道"
+                },
+                "ownerId": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                },
+                "channelId": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                },
+                "newOrderProcess": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                },
+                "userLabel": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                }
+            }
+        },
+        "AccountAllFansTrendPostResponse200": {
+            "properties": {
+                "maleRate": {
+                    "type": "string",
+                    "description": "男性粉丝比例",
+                    "default": "",
+                    "example": "string"
+                },
+                "femaleRate": {
+                    "type": "string",
+                    "description": "女性粉丝比例",
+                    "default": "",
+                    "example": "string"
+                },
+                "fansAge": {
+                    "type": "string",
+                    "description": "粉丝年龄分布比例",
+                    "default": "",
+                    "example": "string"
+                },
+                "fansLocationTop10": {
+                    "type": "string",
+                    "description": "粉丝地域分布前10比例",
+                    "default": "",
+                    "example": "string"
+                },
+                "agentId": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                }
+            }
+        },
+        "PostWeiboMediaList": {
+            "type": "object",
+            "properties": {
+                "accountTag": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "行业分类"
+                },
+                "taskId": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "任务id"
+                },
+                "mediaId": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "资源id"
+                },
+                "platType": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "报价类型"
+                },
+                "contract": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "是否为优选账号(1、优选账号,0或者不传为不按是否优选账号筛选)"
+                },
+                "followerMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "粉丝数量最小值"
+                },
+                "followerMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "粉丝数量最大值"
+                },
+                "priceMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "报价最小值（单位:元）"
+                },
+                "priceMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "报价最大值 (单位:元)"
+                },
+                "ratioMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "男粉丝比例最小值(男粉丝偏多ratioMin传52)"
+                },
+                "ratioMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "男粉丝比例最大值(分布适中:ratioMin传49，ratioMax传51，女粉丝较多ratioMax传48)"
+                },
+                "distTags": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "渠道标签"
+                },
+                "accountFollowers": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "按账户粉丝数排序(1、正序,2、倒序)"
+                },
+                "klrIndex": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "克劳锐指数"
+                },
+                "verifiedType": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "帐号认证类型(蓝v,金v,黄v,达人)"
+                },
+                "star": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "weiq星级"
+                },
+                "cpm": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "cpm指数"
+                },
+                "predictInteractNum": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "价格认证状态标识(1、已认证，不传或传0为不检索认证状态)"
+                },
+                "fansAge": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "粉丝年龄分布"
+                },
+                "fansLocation": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "粉丝地域分布"
+                },
+                "nick": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "昵称"
+                },
+                "pricePost": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "价格排序（1正序，2倒序）"
+                },
+                "postMedianRead": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "平均阅读数排序(1正序，2倒序)"
+                },
+                "postMedianInteract": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "平均互动数排序(1正序，2倒序)"
+                },
+                "postMedianReadMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "平均阅读数最小值"
+                },
+                "postMedianReadMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "平均阅读数最大值"
+                },
+                "postMedianCommentMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "平均阅读数最小值"
+                },
+                "postMedianCommentMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "平均阅读数最大值"
+                },
+                "postMedianLikeMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "平均点赞数最小值"
+                },
+                "postMedianLikeMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "平均点赞数最大值"
+                },
+                "postMedianRepostMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "平均转发数最小值"
+                },
+                "postMedianRepostMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "平均转发数最大值"
+                },
+                "artWbTotalArtMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "发文数量最小值"
+                },
+                "artWbTotalArtMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "发文数量最大值"
+                },
+                "cpmMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "cpm最小值"
+                },
+                "cpmMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "cpm最大值"
+                },
+                "cpeMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "cpe最小值"
+                },
+                "cpeMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "cpe最大值"
+                },
+                "fansTop": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "粉丝头条"
+                },
+                "province": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "达人地域(省份)"
+                },
+                "gender": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "达人性别"
+                },
+                "isStars": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "是否是辰星计划账号"
+                },
+                "rights": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "？？？"
+                },
+                "authPrice": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "价格认证(1已认知,0或不传为不按此条件搜索)"
+                },
+                "fansActivity": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "粉丝活跃度"
+                },
+                "ownerId": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                },
+                "channelId": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                },
+                "newOrderProcess": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                },
+                "userLabel": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                }
+            }
+        },
+        "WeiboMediaListPostResponse200Data": {
+            "properties": {
+                "postPriceAdverDown": {
+                    "type": "string",
+                    "description": "直发刊例价是否降价",
+                    "default": "",
+                    "example": "string"
+                },
+                "postPriceAdverMsg": {
+                    "type": "string",
+                    "description": "直发刊例价降价信息",
+                    "default": "",
+                    "example": "string"
+                },
+                "pricePostDown": {
+                    "type": "string",
+                    "description": "直发渠道价是否降价",
+                    "default": "",
+                    "example": "string"
+                },
+                "pricePostMsg": {
+                    "type": "string",
+                    "description": "直发渠道价降价信息",
+                    "default": "",
+                    "example": "string"
+                },
+                "priceRepostDistDown": {
+                    "type": "string",
+                    "description": "转发渠道价是否降价",
+                    "default": "",
+                    "example": "string"
+                },
+                "priceRepostDistMsg": {
+                    "type": "string",
+                    "description": "转发渠道价降价信息",
+                    "default": "",
+                    "example": "string"
+                },
+                "pricePostDistDown": {
+                    "type": "string",
+                    "description": "直发渠道价是否降价",
+                    "default": "",
+                    "example": "string"
+                },
+                "pricePostDistMsg": {
+                    "type": "string",
+                    "description": "直发渠道价降价信息",
+                    "default": "",
+                    "example": "string"
+                },
+                "wbPlatform": {
+                    "type": "string",
+                    "description": "帐号所属平台类型",
+                    "default": "",
+                    "example": "string"
+                },
+                "mediaId": {
+                    "type": "string",
+                    "description": "资源id",
+                    "default": "",
+                    "example": "string"
+                },
+                "accountUid": {
+                    "type": "string",
+                    "description": "账号uid",
+                    "default": "",
+                    "example": "string"
+                },
+                "accountName": {
+                    "type": "string",
+                    "description": "账号名称",
+                    "default": "",
+                    "example": "string"
+                },
+                "stars": {
+                    "type": "string",
+                    "description": "weiq星级",
+                    "default": "",
+                    "example": "string"
+                },
+                "verifiedType": {
+                    "type": "string",
+                    "description": "认证类型",
+                    "default": "",
+                    "example": "string"
+                },
+                "predictInteractNum": {
+                    "type": "string",
+                    "description": "价格认证状态标识(1、已认证，不传或传0为不检索认证状态)",
+                    "default": "",
+                    "example": "string"
+                },
+                "accountClass": {
+                    "type": "string",
+                    "description": "帐号分类",
+                    "default": "",
+                    "example": "string"
+                },
+                "postPriceAdver": {
+                    "type": "string",
+                    "description": "直发渠道价",
+                    "default": "",
+                    "example": "string"
+                },
+                "forwardPriceAdver": {
+                    "type": "string",
+                    "description": "转发渠道价",
+                    "default": "",
+                    "example": "string"
+                },
+                "avatar": {
+                    "type": "string",
+                    "description": "头像",
+                    "default": "",
+                    "example": "string"
+                },
+                "followersCount": {
+                    "type": "string",
+                    "description": "粉丝数量",
+                    "default": "",
+                    "example": "string"
+                },
+                "klrIndex": {
+                    "type": "string",
+                    "description": "克劳锐指数",
+                    "default": "",
+                    "example": "string"
+                },
+                "plattype": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "resourceType": {
+                    "type": "string",
+                    "description": "资源类型",
+                    "default": "",
+                    "example": "string"
+                },
+                "accountDesc": {
+                    "type": "string",
+                    "description": "账号描述",
+                    "default": "",
+                    "example": "string"
+                },
+                "pricePostDist": {
+                    "type": "string",
+                    "description": "直发渠道价",
+                    "default": "",
+                    "example": "string"
+                },
+                "priceRepostDist": {
+                    "type": "string",
+                    "description": "转发渠道价",
+                    "default": "",
+                    "example": "string"
+                },
+                "pricePost": {
+                    "type": "string",
+                    "description": "直发刊例价",
+                    "default": "",
+                    "example": "string"
+                },
+                "priceRepost": {
+                    "type": "string",
+                    "description": "转发刊例价",
+                    "default": "",
+                    "example": "string"
+                },
+                "predictReadNum": {
+                    "type": "string",
+                    "description": "预计阅读数 [不推荐使用]",
+                    "default": "",
+                    "example": "string"
+                },
+                "predictAttitudeNum": {
+                    "type": "string",
+                    "description": "预计点赞数 [不推荐使用]",
+                    "default": "",
+                    "example": "string"
+                },
+                "predictCommentNum": {
+                    "type": "string",
+                    "description": "预计评论数 [不推荐使用]",
+                    "default": "",
+                    "example": "string"
+                },
+                "predictRepostNum": {
+                    "type": "string",
+                    "description": "预计转发数 [不推荐使用]",
+                    "default": "",
+                    "example": "string"
+                },
+                "predictCpm": {
+                    "type": "string",
+                    "description": "直发cpm",
+                    "default": "",
+                    "example": "string"
+                },
+                "predictCpe": {
+                    "type": "string",
+                    "description": "直发cpe",
+                    "default": "",
+                    "example": "string"
+                },
+                "province": {
+                    "type": "string",
+                    "description": "省",
+                    "default": "",
+                    "example": "string"
+                },
+                "city": {
+                    "type": "string",
+                    "description": "市",
+                    "default": "",
+                    "example": "string"
+                },
+                "gender": {
+                    "type": "string",
+                    "description": "性别",
+                    "default": "",
+                    "example": "string"
+                },
+                "distTags": {
+                    "type": "string",
+                    "description": "渠道标签",
+                    "default": "",
+                    "example": "string"
+                },
+                "verifiedReason": {
+                    "type": "string",
+                    "description": "认证原因",
+                    "default": "",
+                    "example": "string"
+                },
+                "maleRateNum": {
+                    "type": "string",
+                    "description": "男性粉丝数",
+                    "default": "",
+                    "example": "string"
+                },
+                "fansAge": {
+                    "type": "string",
+                    "description": "粉丝年龄分布",
+                    "default": "",
+                    "example": "string"
+                },
+                "totalFansAgeData": {
+                    "type": "string",
+                    "description": "粉丝年龄分布",
+                    "default": "",
+                    "example": "string"
+                },
+                "maleRate": {
+                    "type": "string",
+                    "description": "男性比例",
+                    "default": "",
+                    "example": "string"
+                },
+                "maleRateDes": {
+                    "type": "string",
+                    "description": "男性比例描述",
+                    "default": "",
+                    "example": "string"
+                },
+                "fansLocation": {
+                    "type": "string",
+                    "description": "粉丝地域分布",
+                    "default": "",
+                    "example": "string"
+                },
+                "wbOrgMedianInteract": {
+                    "type": "string",
+                    "description": "原创互动中位数 [不推荐使用]",
+                    "default": "",
+                    "example": "string"
+                },
+                "wbRepostMedianInteract": {
+                    "type": "string",
+                    "description": "转发互动中位数 [不推荐使用]",
+                    "default": "",
+                    "example": "string"
+                },
+                "finishOrder": {
+                    "type": "string",
+                    "description": "完成订单数",
+                    "default": "",
+                    "example": "string"
+                },
+                "wbResponseTime": {
+                    "type": "string",
+                    "description": "平均接单时长",
+                    "default": "",
+                    "example": "string"
+                },
+                "wbPostMedianRead": {
+                    "type": "string",
+                    "description": "平均阅读数",
+                    "default": "",
+                    "example": "string"
+                },
+                "wbPostMedianComment": {
+                    "type": "string",
+                    "description": "平均评论数",
+                    "default": "",
+                    "example": "string"
+                },
+                "wbPostMedianLike": {
+                    "type": "string",
+                    "description": "平均点赞数",
+                    "default": "",
+                    "example": "string"
+                },
+                "wbPostMedianRepost": {
+                    "type": "string",
+                    "description": "平均转发数",
+                    "default": "",
+                    "example": "string"
+                },
+                "wbPostCpm": {
+                    "type": "string",
+                    "description": "直发cpm",
+                    "default": "",
+                    "example": "string"
+                },
+                "wbPostCpe": {
+                    "type": "string",
+                    "description": "直发cpe",
+                    "default": "",
+                    "example": "string"
+                },
+                "wbPostMedianInteract": {
+                    "type": "string",
+                    "description": "直发互动中位数",
+                    "default": "",
+                    "example": "string"
+                },
+                "wbRepostMedianRead": {
+                    "type": "string",
+                    "description": "转发阅读中位数",
+                    "default": "",
+                    "example": "string"
+                },
+                "wbRepostMedianComment": {
+                    "type": "string",
+                    "description": "转发评论中位数",
+                    "default": "",
+                    "example": "string"
+                },
+                "wbRepostMedianLike": {
+                    "type": "string",
+                    "description": "转发点赞中位数",
+                    "default": "",
+                    "example": "string"
+                },
+                "wbRepostMedianRepost": {
+                    "type": "string",
+                    "description": "转发转发中位数",
+                    "default": "",
+                    "example": "string"
+                },
+                "wbRepostCpm": {
+                    "type": "string",
+                    "description": "转发cpm",
+                    "default": "",
+                    "example": "string"
+                },
+                "wbRepostCpe": {
+                    "type": "string",
+                    "description": "转发cpe",
+                    "default": "",
+                    "example": "string"
+                },
+                "wbRepostOrdercnt": {
+                    "type": "string",
+                    "description": "转发完成任务数",
+                    "default": "",
+                    "example": "string"
+                },
+                "wbPostOrdercnt": {
+                    "type": "string",
+                    "description": "直发完成任务数",
+                    "default": "",
+                    "example": "string"
+                },
+                "isFans": {
+                    "type": "string",
+                    "description": "粉丝头条标识 [1-支持粉丝头条; 0-不支持粉丝头条]",
+                    "default": "",
+                    "example": "string"
+                },
+                "klrRate": {
+                    "type": "string",
+                    "description": "克劳锐指数超过红人占比",
+                    "default": "",
+                    "example": "string"
+                },
+                "wbMcnAccounts": {
+                    "type": "string",
+                    "description": "机构达人账号",
+                    "default": "",
+                    "example": "string"
+                },
+                "wbMcnName": {
+                    "type": "string",
+                    "description": "MCN简称",
+                    "default": "",
+                    "example": "string"
+                },
+                "wbArticleCount90": {
+                    "type": "string",
+                    "description": "90天发文总数",
+                    "default": "",
+                    "example": "string"
+                },
+                "wbCommentScore": {
+                    "type": "string",
+                    "description": "综合评分",
+                    "default": "",
+                    "example": "string"
+                },
+                "wbInteractInc": {
+                    "type": "string",
+                    "description": "昨日互动量",
+                    "default": "",
+                    "example": "string"
+                },
+                "verifiedNumber": {
+                    "type": "string",
+                    "description": "用户认证数字类型",
+                    "default": "",
+                    "example": "string"
+                },
+                "inquiryMedia": {
+                    "type": "string",
+                    "description": "是否是认证账号",
+                    "default": "",
+                    "example": "string"
+                },
+                "isFollow": {
+                    "type": "string",
+                    "description": "是否是关注账号",
+                    "default": "",
+                    "example": "string"
+                },
+                "isSelection": {
+                    "type": "string",
+                    "description": "是否是被选中账号",
+                    "default": "",
+                    "example": "string"
+                },
+                "isDiscount": {
+                    "type": "string",
+                    "description": "是否是折扣账号",
+                    "default": "",
+                    "example": "string"
+                },
+                "isPriceDiscount": {
+                    "type": "string",
+                    "description": "是否渠道价和刊例价不同 ?",
+                    "default": "",
+                    "example": "string"
+                },
+                "isStars": {
+                    "type": "string",
+                    "description": "是否是辰星计划账号",
+                    "default": "",
+                    "example": "string"
+                },
+                "priceHeadline": {
+                    "type": "string",
+                    "description": "划线起点(直发刊例价)",
+                    "default": "",
+                    "example": "string"
+                },
+                "priceServiceFee": {
+                    "type": "string",
+                    "description": "资源服务费",
+                    "default": "",
+                    "example": "string"
+                },
+                "isCanOrder": {
+                    "type": "string",
+                    "description": "是否能下单",
+                    "default": "",
+                    "example": "string"
+                },
+                "headLineAdver": {
+                    "type": "string",
+                    "description": "划线起点(直发渠道价)",
+                    "default": "",
+                    "example": "string"
+                }
+            }
+        },
+        "WeiboMediaListPostResponse200": {
+            "properties": {
+                "data": {
+                    "type": "array",
+                    "description": "",
+                    "items": {
+                        "$ref": "#/definitions/WeiboMediaListPostResponse200Data"
+                    }
+                },
+                "page": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "limit": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "total": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "agentId": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                }
+            }
+        },
+        "PostWechatMediaList": {
+            "type": "object",
+            "properties": {
+                "mediaId": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "资源id"
+                },
+                "accountTag": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "内容分类"
+                },
+                "followerMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "粉丝数量最小值"
+                },
+                "followerMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "粉丝数量最大值"
+                },
+                "ratioMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "账号男性比例最小值"
+                },
+                "ratioMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "账号男性比例最大值"
+                },
+                "oneMedianReadMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "头条阅读中位数最小值"
+                },
+                "oneMedianReadMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "头条阅读中位数最大值"
+                },
+                "nick": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "昵称"
+                },
+                "distTags": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "渠道标签"
+                },
+                "priceCertifiedTags": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "价格认证状态标识(1、已认证，不传或传0为不检索认证状态)"
+                },
+                "taskId": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "任务id"
+                },
+                "platType": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "报价类型"
+                },
+                "priceMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "价格最小值"
+                },
+                "priceMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "价格最大值"
+                },
+                "price": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "是否按价格排序（1、倒序，0或者不传为不按价格排序）"
+                },
+                "accountFollowers": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "是否按粉丝数量排序(1、倒序，0或者不传为不按价格排序）"
+                },
+                "oneMedianRead": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "头条阅读中位数"
+                },
+                "contract": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "是否为优选账号(1、优选账号,0或者不传为不按是否优选账号筛选)"
+                },
+                "readMedian": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "预计阅读数"
+                },
+                "praiseMedian": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "预计点赞数"
+                },
+                "klrIndex": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "克劳锐指数"
+                },
+                "reds": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "是否是10W+红人(1、为是,0或者不传为不按此条件搜索)"
+                },
+                "follow": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "是否只看关注账号(1、为是,0或者不传为不按此条件搜索)"
+                },
+                "priceDiscount": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "是否只看限时特惠(1、为是,0或者不传为不按此条件搜索)"
+                },
+                "ownerId": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                },
+                "channelId": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                },
+                "newOrderProcess": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                },
+                "userLabel": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                }
+            }
+        },
+        "WechatMediaListPostResponse200Data": {
+            "properties": {
+                "distMarkCollectionPublishPriceDown": {
+                    "type": "string",
+                    "description": "是否种草合集发布降价(true/false)",
+                    "default": "",
+                    "example": "string"
+                },
+                "distMarkCollectionPublishPriceMsg": {
+                    "type": "string",
+                    "description": "种草合集发布降价描述信息",
+                    "default": "",
+                    "example": "string"
+                },
+                "distNotopPublishPriceDown": {
+                    "type": "string",
+                    "description": "非头条供稿发布是否降价(true/false)",
+                    "default": "",
+                    "example": "string"
+                },
+                "distNotopPublishPriceMsg": {
+                    "type": "string",
+                    "description": "非头条供稿发布降价描述信息",
+                    "default": "",
+                    "example": "string"
+                },
+                "distTopPublishPriceDown": {
+                    "type": "string",
+                    "description": "头条供稿发布是否降价(true/false)",
+                    "default": "",
+                    "example": "string"
+                },
+                "distTopPublishPriceMsg": {
+                    "type": "string",
+                    "description": "头条供稿发布降价描述信息",
+                    "default": "",
+                    "example": "string"
+                },
+                "distNotopOriginalPublishPriceDown": {
+                    "type": "string",
+                    "description": "非头条原创发布(true/false)",
+                    "default": "",
+                    "example": "string"
+                },
+                "distNotopOriginalPublishPriceMsg": {
+                    "type": "string",
+                    "description": "非头条原创降价描述信息",
+                    "default": "",
+                    "example": "string"
+                },
+                "distTopOriginalPublishPriceDown": {
+                    "type": "string",
+                    "description": "头条原创发布是否降价(true/false)",
+                    "default": "",
+                    "example": "string"
+                },
+                "distTopOriginalPublishPriceMsg": {
+                    "type": "string",
+                    "description": "头条原创发布降价信息",
+                    "default": "",
+                    "example": "string"
+                },
+                "mediaId": {
+                    "type": "string",
+                    "description": "资源id",
+                    "default": "",
+                    "example": "string"
+                },
+                "accountUid": {
+                    "type": "string",
+                    "description": "账户uid",
+                    "default": "",
+                    "example": "string"
+                },
+                "accountName": {
+                    "type": "string",
+                    "description": "账户名称",
+                    "default": "",
+                    "example": "string"
+                },
+                "accountClass": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "accountFollowers": {
+                    "type": "string",
+                    "description": "格式化后的粉丝数量(W)",
+                    "default": "",
+                    "example": "string"
+                },
+                "followersCount": {
+                    "type": "string",
+                    "description": "粉丝数量",
+                    "default": "",
+                    "example": "string"
+                },
+                "avatar": {
+                    "type": "string",
+                    "description": "头像",
+                    "default": "",
+                    "example": "string"
+                },
+                "platType": {
+                    "type": "string",
+                    "description": "报价类型",
+                    "default": "",
+                    "example": "string"
+                },
+                "accountQrcode": {
+                    "type": "string",
+                    "description": "账户头像",
+                    "default": "",
+                    "example": "string"
+                },
+                "accountDesc": {
+                    "type": "string",
+                    "description": "账户描述",
+                    "default": "",
+                    "example": "string"
+                },
+                "companyName": {
+                    "type": "string",
+                    "description": "公司名称",
+                    "default": "",
+                    "example": "string"
+                },
+                "distTags": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "klrIndex": {
+                    "type": "string",
+                    "description": "克劳锐指数",
+                    "default": "",
+                    "example": "string"
+                },
+                "praiseMedian": {
+                    "type": "string",
+                    "description": "预计点赞数",
+                    "default": "",
+                    "example": "string"
+                },
+                "readMedian": {
+                    "type": "string",
+                    "description": "预计阅读数",
+                    "default": "",
+                    "example": "string"
+                },
+                "priceSingle": {
+                    "type": "string",
+                    "description": "单图文发布价格（渠道：元）",
+                    "default": "",
+                    "example": "string"
+                },
+                "priceMultiOne": {
+                    "type": "string",
+                    "description": "多图文第一条发布价格（渠道：元）",
+                    "default": "",
+                    "example": "string"
+                },
+                "priceMultiTwo": {
+                    "type": "string",
+                    "description": "多图文第二条发布价格（渠道：元）",
+                    "default": "",
+                    "example": "string"
+                },
+                "priceMultiThree": {
+                    "type": "string",
+                    "description": "多图文第三条发布价格（渠道：元）",
+                    "default": "",
+                    "example": "string"
+                },
+                "priceSingleAdver": {
+                    "type": "string",
+                    "description": "单图文发布价格（刊例：元）",
+                    "default": "",
+                    "example": "string"
+                },
+                "priceMultiOneAdver": {
+                    "type": "string",
+                    "description": "多图文第一条发布价格（刊例：元）",
+                    "default": "",
+                    "example": "string"
+                },
+                "priceMultiTwoAdver": {
+                    "type": "string",
+                    "description": "多图文第二条发布价格（刊例：元）",
+                    "default": "",
+                    "example": "string"
+                },
+                "priceMultiThreeAdver": {
+                    "type": "string",
+                    "description": "多图文第三条发布价格（刊例：元）",
+                    "default": "",
+                    "example": "string"
+                },
+                "resourceType": {
+                    "type": "string",
+                    "description": "资源类型（是否优质账号）",
+                    "default": "",
+                    "example": "string"
+                },
+                "sexRadio": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "topPredictRead": {
+                    "type": "string",
+                    "description": "单图文预计阅读数",
+                    "default": "",
+                    "example": "string"
+                },
+                "onePredictRead": {
+                    "type": "string",
+                    "description": "多图头条预计阅读数",
+                    "default": "",
+                    "example": "string"
+                },
+                "twoPredictRead": {
+                    "type": "string",
+                    "description": "多图次条预计阅读数",
+                    "default": "",
+                    "example": "string"
+                },
+                "threePredictRead": {
+                    "type": "string",
+                    "description": "多图三条预计阅读数",
+                    "default": "",
+                    "example": "string"
+                },
+                "suitablePostTime": {
+                    "type": "string",
+                    "description": "适合发布时间",
+                    "default": "",
+                    "example": "string"
+                },
+                "finishOrder": {
+                    "type": "string",
+                    "description": "完成订单数量",
+                    "default": "",
+                    "example": "string"
+                },
+                "postingNum7": {
+                    "type": "string",
+                    "description": "7天发文次数",
+                    "default": "",
+                    "example": "string"
+                },
+                "artNum7": {
+                    "type": "string",
+                    "description": "7天文章数",
+                    "default": "",
+                    "example": "string"
+                },
+                "dayNum7": {
+                    "type": "string",
+                    "description": "发文天数",
+                    "default": "",
+                    "example": "string"
+                },
+                "dayNum7New": {
+                    "type": "string",
+                    "description": "发文天数>0?发文天数:7天发文次数",
+                    "default": "",
+                    "example": "string"
+                },
+                "adverTopPublishPrice": {
+                    "type": "string",
+                    "description": "头条发布刊例价(单位:元)",
+                    "default": "",
+                    "example": "string"
+                },
+                "adverNotopPublishPrice": {
+                    "type": "string",
+                    "description": "非头条发布刊例价(单位:元)",
+                    "default": "",
+                    "example": "string"
+                },
+                "adverTopOriginalPublishPrice": {
+                    "type": "string",
+                    "description": "头条原创+发布刊例价(单位:元)",
+                    "default": "",
+                    "example": "string"
+                },
+                "adverNotopOriginalPublishPrice": {
+                    "type": "string",
+                    "description": "非头条原创+发布刊例价(单位:元)",
+                    "default": "",
+                    "example": "string"
+                },
+                "distTopPublishPrice": {
+                    "type": "string",
+                    "description": "头条发布渠道价(单位:元)",
+                    "default": "",
+                    "example": "string"
+                },
+                "distNotopPublishPrice": {
+                    "type": "string",
+                    "description": "非头条发布渠道价(单位:元)",
+                    "default": "",
+                    "example": "string"
+                },
+                "distTopOriginalPublishPrice": {
+                    "type": "string",
+                    "description": "头条原创+发布渠道价(单位:元)",
+                    "default": "",
+                    "example": "string"
+                },
+                "distNotopOriginalPublishPrice": {
+                    "type": "string",
+                    "description": "非头条原创+发布渠道价(单位:元)",
+                    "default": "",
+                    "example": "string"
+                },
+                "predictCpe": {
+                    "type": "string",
+                    "description": "单次互动成本cpe",
+                    "default": "",
+                    "example": "string"
+                },
+                "oneMedianRead": {
+                    "type": "string",
+                    "description": "头条阅读中位数",
+                    "default": "",
+                    "example": "string"
+                },
+                "oneMedianLike": {
+                    "type": "string",
+                    "description": "头条在看中位数",
+                    "default": "",
+                    "example": "string"
+                },
+                "twoMedianRead": {
+                    "type": "string",
+                    "description": "非头条阅读中位数",
+                    "default": "",
+                    "example": "string"
+                },
+                "twoMedianLike": {
+                    "type": "string",
+                    "description": "非头条点赞中位数",
+                    "default": "",
+                    "example": "string"
+                },
+                "priceCertifiedTags": {
+                    "type": "string",
+                    "description": "价格认证状态标识",
+                    "default": "",
+                    "example": "string"
+                },
+                "priceCertifiedTime": {
+                    "type": "string",
+                    "description": "价格认证时间",
+                    "default": "",
+                    "example": "string"
+                },
+                "wxCommentScore": {
+                    "type": "string",
+                    "description": "综合评分",
+                    "default": "",
+                    "example": "string"
+                },
+                "oneAvgRead": {
+                    "type": "string",
+                    "description": "头图平均阅读数",
+                    "default": "",
+                    "example": "string"
+                },
+                "twoAvgRead": {
+                    "type": "string",
+                    "description": "非头图平均阅读数",
+                    "default": "",
+                    "example": "string"
+                },
+                "adverMarkCollectionPublishPrice": {
+                    "type": "string",
+                    "description": "种草合集刊例价",
+                    "default": "",
+                    "example": "string"
+                },
+                "distMarkCollectionPublishPrice": {
+                    "type": "string",
+                    "description": "种草合集渠道价",
+                    "default": "",
+                    "example": "string"
+                },
+                "isFollow": {
+                    "type": "string",
+                    "description": "是否已关注账号",
+                    "default": "",
+                    "example": "string"
+                },
+                "isSelection": {
+                    "type": "string",
+                    "description": "是否已选中账号",
+                    "default": "",
+                    "example": "string"
+                },
+                "isDiscount": {
+                    "type": "string",
+                    "description": "是否折扣账号",
+                    "default": "",
+                    "example": "string"
+                },
+                "isPriceDiscount": {
+                    "type": "string",
+                    "description": "是否渠道价和刊例价不同",
+                    "default": "",
+                    "example": "string"
+                },
+                "priceServiceFee": {
+                    "type": "string",
+                    "description": "资源服务费",
+                    "default": "",
+                    "example": "string"
+                },
+                "timeLimitDiscount": {
+                    "type": "string",
+                    "description": "是否是限时特惠",
+                    "default": "",
+                    "example": "string"
+                }
+            }
+        },
+        "WechatMediaListPostResponse200": {
+            "properties": {
+                "data": {
+                    "type": "array",
+                    "description": "",
+                    "items": {
+                        "$ref": "#/definitions/WechatMediaListPostResponse200Data"
+                    }
+                },
+                "page": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "limit": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "total": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "agentId": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                }
+            }
+        },
+        "PostTiktokMediaList": {
+            "type": "object",
+            "properties": {
+                "mediaId": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "资源id"
+                },
+                "accountTag": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "账户标签"
+                },
+                "distTags": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "渠道标签"
+                },
+                "followerMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "粉丝数最小值"
+                },
+                "followerMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "粉丝数最大值"
+                },
+                "priceMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "报价金额最小值"
+                },
+                "priceMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "报价金额最大值"
+                },
+                "platType": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "报价类型(one:1-20s,two:21-60s,mins:60s以上)"
+                },
+                "cpmMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "cmp最小值"
+                },
+                "cpmMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "cmp最大值"
+                },
+                "cpeMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "cpe最小值"
+                },
+                "cpeMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "cpe最大值"
+                },
+                "avgPlayNum": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "帐号平均播放量"
+                },
+                "follow": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "是否只看关注 (1只看关注,0或不传为非只看关注账号)"
+                },
+                "klrIndex": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "克劳锐指数"
+                },
+                "accountFollowers": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "按账户粉丝数排序(1、正序,2、倒序)"
+                },
+                "avgAttitudeNum": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "平均点赞数"
+                },
+                "fansLocation": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "帐号粉丝地域分布"
+                },
+                "ratioMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "帐号男性粉丝比例最小值"
+                },
+                "ratioMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "帐号男性粉丝比例最大值"
+                },
+                "fansAge": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "粉丝年龄"
+                },
+                "mediaType": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                },
+                "nick": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "昵称"
+                },
+                "avgNumsPlayMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "平均播放数量最小值"
+                },
+                "avgNumsPlayMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "平均播放数量最大值"
+                },
+                "ownerId": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                },
+                "channelId": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                },
+                "newOrderProcess": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                },
+                "userLabel": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                }
+            }
+        },
+        "TiktokMediaListPostResponse200Data": {
+            "properties": {
+                "adverMinsPriceDown": {
+                    "type": "string",
+                    "description": "60S以上视频刊例价是否降价",
+                    "default": "",
+                    "example": "string"
+                },
+                "adverMinsPriceMsg": {
+                    "type": "string",
+                    "description": "60S以上视频刊例价降价信息",
+                    "default": "",
+                    "example": "string"
+                },
+                "adverMediumPriceDown": {
+                    "type": "string",
+                    "description": "21~60S视频刊例价是否降价",
+                    "default": "",
+                    "example": "string"
+                },
+                "adverMediumPriceMsg": {
+                    "type": "string",
+                    "description": "21~60S视频刊例价降价信息",
+                    "default": "",
+                    "example": "string"
+                },
+                "adverShortPriceDown": {
+                    "type": "string",
+                    "description": "1~20s视频是否降价",
+                    "default": "",
+                    "example": "string"
+                },
+                "adverShortPriceMsg": {
+                    "type": "string",
+                    "description": "1~20s视频降价信息",
+                    "default": "",
+                    "example": "string"
+                },
+                "mediaId": {
+                    "type": "string",
+                    "description": "资源id",
+                    "default": "",
+                    "example": "string"
+                },
+                "accountUid": {
+                    "type": "string",
+                    "description": "账户uid",
+                    "default": "",
+                    "example": "string"
+                },
+                "accountName": {
+                    "type": "string",
+                    "description": "账户名称",
+                    "default": "",
+                    "example": "string"
+                },
+                "shareLink": {
+                    "type": "string",
+                    "description": "分享链接",
+                    "default": "",
+                    "example": "string"
+                },
+                "shareId": {
+                    "type": "string",
+                    "description": "分享id",
+                    "default": "",
+                    "example": "string"
+                },
+                "accountClass": {
+                    "type": "string",
+                    "description": "账户所属分类",
+                    "default": "",
+                    "example": "string"
+                },
+                "avatar": {
+                    "type": "string",
+                    "description": "头像",
+                    "default": "",
+                    "example": "string"
+                },
+                "gender": {
+                    "type": "string",
+                    "description": "性别",
+                    "default": "",
+                    "example": "string"
+                },
+                "accountFollowers": {
+                    "type": "string",
+                    "description": "粉丝数量",
+                    "default": "",
+                    "example": "string"
+                },
+                "province": {
+                    "type": "string",
+                    "description": "省份",
+                    "default": "",
+                    "example": "string"
+                },
+                "avgPlayNum": {
+                    "type": "string",
+                    "description": "帐号平均播放量",
+                    "default": "",
+                    "example": "string"
+                },
+                "avgRepostNum": {
+                    "type": "string",
+                    "description": "帐号平均转发量",
+                    "default": "",
+                    "example": "string"
+                },
+                "avgCommentNum": {
+                    "type": "string",
+                    "description": "帐号平均评论量",
+                    "default": "",
+                    "example": "string"
+                },
+                "avgAttitudeNum": {
+                    "type": "string",
+                    "description": "平均点赞量",
+                    "default": "",
+                    "example": "string"
+                },
+                "avgInteractNum": {
+                    "type": "string",
+                    "description": "平均互动数",
+                    "default": "",
+                    "example": "string"
+                },
+                "originalShortPrice": {
+                    "type": "string",
+                    "description": "1-20s视频渠道价",
+                    "default": "",
+                    "example": "string"
+                },
+                "originalMediumPrice": {
+                    "type": "string",
+                    "description": "21-60视频渠道价",
+                    "default": "",
+                    "example": "string"
+                },
+                "adverShortPrice": {
+                    "type": "string",
+                    "description": "1-20s视频刊例价",
+                    "default": "",
+                    "example": "string"
+                },
+                "adverMediumPrice": {
+                    "type": "string",
+                    "description": "21-60视频刊例价",
+                    "default": "",
+                    "example": "string"
+                },
+                "originalMinsPrice": {
+                    "type": "string",
+                    "description": "60s以上视频渠道价",
+                    "default": "",
+                    "example": "string"
+                },
+                "adverMinsPrice": {
+                    "type": "string",
+                    "description": "60s以上视频刊例价",
+                    "default": "",
+                    "example": "string"
+                },
+                "serviceShortPrice": {
+                    "type": "string",
+                    "description": "1-20s视频服务费",
+                    "default": "",
+                    "example": "string"
+                },
+                "serviceMediumPrice": {
+                    "type": "string",
+                    "description": "21-60视频服务费",
+                    "default": "",
+                    "example": "string"
+                },
+                "serviceMinsPrice": {
+                    "type": "string",
+                    "description": "60s以上视频服务费",
+                    "default": "",
+                    "example": "string"
+                },
+                "adverEquityLinkPrice": {
+                    "type": "string",
+                    "description": "链接刊例价",
+                    "default": "",
+                    "example": "string"
+                },
+                "adverEquityCartPrice": {
+                    "type": "string",
+                    "description": "购物车刊例价",
+                    "default": "",
+                    "example": "string"
+                },
+                "distEquityLinkPrice": {
+                    "type": "string",
+                    "description": "链接渠道价",
+                    "default": "",
+                    "example": "string"
+                },
+                "distEquityCartPrice": {
+                    "type": "string",
+                    "description": "购物车渠道价",
+                    "default": "",
+                    "example": "string"
+                },
+                "distTags": {
+                    "type": "string",
+                    "description": "渠道标签",
+                    "default": "",
+                    "example": "string"
+                },
+                "klrIndex": {
+                    "type": "string",
+                    "description": "克劳锐指数",
+                    "default": "",
+                    "example": "string"
+                },
+                "videoCount": {
+                    "type": "string",
+                    "description": "视频总量",
+                    "default": "",
+                    "example": "string"
+                },
+                "cpm": {
+                    "type": "string",
+                    "description": "cpm",
+                    "default": "",
+                    "example": "string"
+                },
+                "cpe": {
+                    "type": "string",
+                    "description": "cpe",
+                    "default": "",
+                    "example": "string"
+                },
+                "cpmBd": {
+                    "type": "string",
+                    "description": "CPD（大数据）",
+                    "default": "",
+                    "example": "string"
+                },
+                "city": {
+                    "type": "string",
+                    "description": "城市",
+                    "default": "",
+                    "example": "string"
+                },
+                "finishOrder": {
+                    "type": "string",
+                    "description": "完成订单数",
+                    "default": "",
+                    "example": "string"
+                },
+                "platClass": {
+                    "type": "string",
+                    "description": "擅长领域",
+                    "default": "",
+                    "example": "string"
+                },
+                "maleRate": {
+                    "type": "string",
+                    "description": "男性粉丝比例",
+                    "default": "",
+                    "example": "string"
+                },
+                "weiqUserId": {
+                    "type": "string",
+                    "description": "weiq账户id",
+                    "default": "",
+                    "example": "string"
+                },
+                "totalFansAgeData": {
+                    "type": "string",
+                    "description": "粉丝年龄分布",
+                    "default": "",
+                    "example": "string"
+                },
+                "fansAge": {
+                    "type": "string",
+                    "description": "粉丝年龄分布",
+                    "default": "",
+                    "example": "string"
+                },
+                "fansLocation": {
+                    "type": "string",
+                    "description": "粉丝地域分布",
+                    "default": "",
+                    "example": "string"
+                },
+                "maleRateDes": {
+                    "type": "string",
+                    "description": "粉丝比例描述（男女粉丝均衡）",
+                    "default": "",
+                    "example": "string"
+                },
+                "dyCommentScore": {
+                    "type": "string",
+                    "description": "综合评分",
+                    "default": "",
+                    "example": "string"
+                },
+                "xingtuId": {
+                    "type": "string",
+                    "description": "星图id",
+                    "default": "",
+                    "example": "string"
+                },
+                "isServiceUser": {
+                    "type": "string",
+                    "description": "是否是系统测试账号id",
+                    "default": "",
+                    "example": "string"
+                },
+                "isVa": {
+                    "type": "string",
+                    "description": "是否是虚拟自媒体主",
+                    "default": "",
+                    "example": "string"
+                },
+                "dyInteractInc": {
+                    "type": "string",
+                    "description": "昨日互动量",
+                    "default": "",
+                    "example": "string"
+                },
+                "isSelection": {
+                    "type": "string",
+                    "description": "是否是被选中账号",
+                    "default": "",
+                    "example": "string"
+                },
+                "isFollow": {
+                    "type": "string",
+                    "description": "是否是关注账号",
+                    "default": "",
+                    "example": "string"
+                },
+                "isDiscount": {
+                    "type": "string",
+                    "description": "是否是折扣账号",
+                    "default": "",
+                    "example": "string"
+                },
+                "isPriceDiscount": {
+                    "type": "string",
+                    "description": "渠道价和刊例价不同",
+                    "default": "",
+                    "example": "string"
+                },
+                "priceServiceFee": {
+                    "type": "string",
+                    "description": "资源服务费",
+                    "default": "",
+                    "example": "string"
+                },
+                "timeLimitDiscount": {
+                    "type": "string",
+                    "description": "是否是限时特惠",
+                    "default": "",
+                    "example": "string"
+                }
+            }
+        },
+        "TiktokMediaListPostResponse200": {
+            "properties": {
+                "data": {
+                    "type": "array",
+                    "description": "",
+                    "items": {
+                        "$ref": "#/definitions/TiktokMediaListPostResponse200Data"
+                    }
+                },
+                "page": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "limit": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "total": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "agentId": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                }
+            }
+        },
+        "PostRedbookMediaList": {
+            "type": "object",
+            "properties": {
+                "accountTag": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                },
+                "mediaid": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "资源id"
+                },
+                "plattype": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "报价类型"
+                },
+                "follow": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "其他筛选-是否只看关注账号(1、为是,0或者不传为不按此条件搜索)"
+                },
+                "followerMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "达人信息-最小粉丝数"
+                },
+                "followerMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "达人信息-最大粉丝数"
+                },
+                "priceMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "合作价格-最低价格"
+                },
+                "priceMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "合作价格-最高价格"
+                },
+                "ratioMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "账号男性比例最小值"
+                },
+                "ratioMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "账号男性比例最大值"
+                },
+                "distTags": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "渠道标签"
+                },
+                "accountFollowers": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "是否按粉丝数量排序(1、倒序，0或者不传为不按价格排序）"
+                },
+                "klrIndex": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "克劳锐指数"
+                },
+                "fansAge": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "粉丝年龄"
+                },
+                "fansLocation": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "粉丝地域"
+                },
+                "nick": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "昵称"
+                },
+                "gender": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "性别"
+                },
+                "contentType": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "内容分类"
+                },
+                "priceDiscount": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "是否只看限时特惠(1、为是,0或者不传为不按此条件搜索)"
+                },
+                "lockType": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "报价红人类型：(图文笔记note_art_price、视频笔记note_video_price)"
+                },
+                "accountForm": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "内容形式 （多个是逗号分开 vlog,探店）"
+                },
+                "accountStyle": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "账号风格 (多个是逗号分开 韩系,日系)"
+                },
+                "accountLifeStyle": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "生活方式 (多个逗号分开 职场生活,自律生活)"
+                },
+                "accountArea": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "账号地域"
+                },
+                "grade": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "达人等级"
+                },
+                "priceArtMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "图文价格最小值"
+                },
+                "priceArtMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "图文价格最大值"
+                },
+                "priceVideoMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "视频价格最小值"
+                },
+                "priceVideoMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "视频价格最大值"
+                },
+                "ownerId": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                },
+                "channelId": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                },
+                "newOrderProcess": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                },
+                "userLabel": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                }
+            }
+        },
+        "RedbookMediaListPostResponse200Data": {
+            "properties": {
+                "mediaId": {
+                    "type": "string",
+                    "description": "账号唯一标识",
+                    "default": "",
+                    "example": "string"
+                },
+                "accountUid": {
+                    "type": "string",
+                    "description": "账号uid",
+                    "default": "",
+                    "example": "string"
+                },
+                "accountName": {
+                    "type": "string",
+                    "description": "账号名称",
+                    "default": "",
+                    "example": "string"
+                },
+                "adverEquityCartPrice": {
+                    "type": "string",
+                    "description": "购物车刊例价",
+                    "default": "",
+                    "example": "string"
+                },
+                "adverEquityLinkPrice": {
+                    "type": "string",
+                    "description": "链接渠道价",
+                    "default": "",
+                    "example": "string"
+                },
+                "adverNoteArtPrice": {
+                    "type": "string",
+                    "description": "图文笔记刊例价",
+                    "default": "",
+                    "example": "string"
+                },
+                "adverNoteArtPriceDown": {
+                    "type": "string",
+                    "description": "广告主图文笔记是否降价",
+                    "default": "",
+                    "example": "string"
+                },
+                "adverNoteArtPriceMsg": {
+                    "type": "string",
+                    "description": "广告主图文笔记降价信息",
+                    "default": "",
+                    "example": "string"
+                },
+                "adverNoteVideoPrice": {
+                    "type": "string",
+                    "description": "视频笔记刊例价",
+                    "default": "",
+                    "example": "string"
+                },
+                "adverNoteVideoPriceDown": {
+                    "type": "string",
+                    "description": "广告主视频笔记是否降价",
+                    "default": "",
+                    "example": "string"
+                },
+                "adverNoteVideoPriceMsg": {
+                    "type": "string",
+                    "description": "广告主视频笔记降价信息",
+                    "default": "",
+                    "example": "string"
+                },
+                "avatar": {
+                    "type": "string",
+                    "description": "头像",
+                    "default": "",
+                    "example": "string"
+                },
+                "city": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "collected": {
+                    "type": "string",
+                    "description": "被点赞和收藏数",
+                    "default": "",
+                    "example": "string"
+                },
+                "contentType": {
+                    "type": "string",
+                    "description": "内容类目",
+                    "default": "",
+                    "example": "string"
+                },
+                "distEquityCartPrice": {
+                    "type": "string",
+                    "description": "购物车渠道价",
+                    "default": "",
+                    "example": "string"
+                },
+                "distEquityLinkPrice": {
+                    "type": "string",
+                    "description": "链接渠道价",
+                    "default": "",
+                    "example": "string"
+                },
+                "distTags": {
+                    "type": "string",
+                    "description": "渠道标签",
+                    "default": "",
+                    "example": "string"
+                },
+                "fansAge": {
+                    "type": "string",
+                    "description": "粉丝年龄区间",
+                    "default": "",
+                    "example": "string"
+                },
+                "fansLocation": {
+                    "type": "string",
+                    "description": "粉丝地域区间",
+                    "default": "",
+                    "example": "string"
+                },
+                "followersCount": {
+                    "type": "string",
+                    "description": "粉丝数",
+                    "default": "",
+                    "example": "string"
+                },
+                "gender": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "grade": {
+                    "type": "string",
+                    "description": "达人等级",
+                    "default": "",
+                    "example": "string"
+                },
+                "isDiscount": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "isFollow": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "isPriceDiscount": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "isSelection": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "isServiceUser": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "isVa": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "klrIndex": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "liked": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "lockPrice": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "lockPriceTime": {
+                    "type": "string",
+                    "description": "锁价时间",
+                    "default": "",
+                    "example": "string"
+                },
+                "maleRate": {
+                    "type": "string",
+                    "description": "男粉丝比例",
+                    "default": "",
+                    "example": "string"
+                },
+                "maleRateDes": {
+                    "type": "string",
+                    "description": "男粉丝比例描述",
+                    "default": "",
+                    "example": "string"
+                },
+                "mcnName": {
+                    "type": "string",
+                    "description": "MCN简称",
+                    "default": "",
+                    "example": "string"
+                },
+                "accountClass": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "medianReadImageNum": {
+                    "type": "string",
+                    "description": "图文中位阅读数",
+                    "default": "",
+                    "example": "string"
+                },
+                "medianReadVideoNum": {
+                    "type": "string",
+                    "description": "视频中位阅读数",
+                    "default": "",
+                    "example": "string"
+                },
+                "noteArtAvgRead": {
+                    "type": "string",
+                    "description": "图文笔记平均阅读数",
+                    "default": "",
+                    "example": "string"
+                },
+                "noteArtPriceLockIcon": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "noteArtPriceLockTime": {
+                    "type": "string",
+                    "description": "图文笔记锁价时间",
+                    "default": "",
+                    "example": "string"
+                },
+                "noteVideoAvgRead": {
+                    "type": "string",
+                    "description": "视频笔记平均阅读数",
+                    "default": "",
+                    "example": "string"
+                },
+                "noteVideoPriceLockIcon": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "noteVideoPriceLockTime": {
+                    "type": "string",
+                    "description": "视频笔记锁价时间",
+                    "default": "",
+                    "example": "string"
+                },
+                "originalNoteArtPrice": {
+                    "type": "string",
+                    "description": "原图文笔记价格",
+                    "default": "",
+                    "example": "string"
+                },
+                "originalNoteVideoPrice": {
+                    "type": "string",
+                    "description": "原视频笔记价格",
+                    "default": "",
+                    "example": "string"
+                },
+                "priceServiceFee": {
+                    "type": "string",
+                    "description": "服务费",
+                    "default": "",
+                    "example": "string"
+                },
+                "redId": {
+                    "type": "string",
+                    "description": "小红书id",
+                    "default": "",
+                    "example": "string"
+                },
+                "serviceNoteArtPrice": {
+                    "type": "string",
+                    "description": "图文笔记服务费",
+                    "default": "",
+                    "example": "string"
+                },
+                "serviceNoteVideoPrice": {
+                    "type": "string",
+                    "description": "视频笔记服务费",
+                    "default": "",
+                    "example": "string"
+                },
+                "timeLimitDiscount": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "totalFansAgeData": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "xhsCommentScore": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "xhsInteractInc": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                }
+            }
+        },
+        "RedbookMediaListPostResponse200": {
+            "properties": {
+                "data": {
+                    "type": "array",
+                    "description": "",
+                    "items": {
+                        "$ref": "#/definitions/RedbookMediaListPostResponse200Data"
+                    }
+                },
+                "page": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "limit": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "total": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "agentId": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                }
+            }
+        },
+        "PostKwaiMediaList": {
+            "type": "object",
+            "properties": {
+                "platType": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "报价类型"
+                },
+                "mediaId": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "资源id"
+                },
+                "accountTag": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "内容分类"
+                },
+                "followerMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "粉丝数量最小值"
+                },
+                "followerMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "粉丝数量最大值"
+                },
+                "priceMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "报价-最小"
+                },
+                "priceMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "报价-最大"
+                },
+                "playMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "平均播放量-最小"
+                },
+                "playMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "平均播放量-最大"
+                },
+                "follow": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "是否只看关注账号(1、为是,0或者不传为不按此条件搜索)"
+                },
+                "platClass": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "擅长领域"
+                },
+                "type": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "类型"
+                },
+                "cpmMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "(预计CPM)千人浏览成本-最小"
+                },
+                "cpmMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "(预计CPM)千人浏览成本-最大"
+                },
+                "cpeMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "(预计CPE)用户互动计费-最小"
+                },
+                "cpeMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "(预计CPE)用户互动计费-最大"
+                },
+                "distTags": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "渠道标签"
+                },
+                "ratioMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "账号男性比例最小值"
+                },
+                "ratioMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "账号男性比例最大值"
+                },
+                "likecntMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "平均点赞量-最小"
+                },
+                "likecntMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "平均点赞量-最大"
+                },
+                "commentcntMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "平均评论量-最小"
+                },
+                "commentcntMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "平均评论量-最大"
+                },
+                "forwardcntMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "平均分享量-最小"
+                },
+                "forwardcntMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "平均分享量-最大"
+                },
+                "fansAge": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "粉丝年龄"
+                },
+                "fansLocation": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "粉丝地域"
+                },
+                "gender": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "达人性别"
+                },
+                "province": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "达人地域"
+                },
+                "priceDiscount": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "是否只看限时特惠(1、为是,0或者不传为不按此条件搜索)"
+                },
+                "lockType": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "保价红人类型 (video_price)"
+                },
+                "price": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "是否按价格排序（1、倒序，0或者不传为不按价格排序）"
+                },
+                "medianViewcnt": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                },
+                "medianInteractcnt": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                },
+                "nick": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "昵称"
+                },
+                "accountFollowers": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "是否按粉丝数量排序(1、倒序，0或者不传为不按价格排序）"
+                },
+                "followMediaId": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                },
+                "ownerId": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                },
+                "channelId": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                },
+                "newOrderProcess": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                },
+                "userLabel": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                }
+            }
+        },
+        "KwaiMediaListPostResponse200Data": {
+            "properties": {
+                "platType": {
+                    "type": "string",
+                    "description": "平台类型",
+                    "default": "",
+                    "example": "string"
+                },
+                "mediaId": {
+                    "type": "string",
+                    "description": "账号唯一标识",
+                    "default": "",
+                    "example": "string"
+                },
+                "accountUid": {
+                    "type": "string",
+                    "description": "账号uid",
+                    "default": "",
+                    "example": "string"
+                },
+                "accountName": {
+                    "type": "string",
+                    "description": "账号名称",
+                    "default": "",
+                    "example": "string"
+                },
+                "accountClass": {
+                    "type": "string",
+                    "description": "帐号分类",
+                    "default": "",
+                    "example": "string"
+                },
+                "accountDesc": {
+                    "type": "string",
+                    "description": "账号描述",
+                    "default": "",
+                    "example": "string"
+                },
+                "avatar": {
+                    "type": "string",
+                    "description": "头像",
+                    "default": "",
+                    "example": "string"
+                },
+                "accountFollowers": {
+                    "type": "string",
+                    "description": "粉丝数量",
+                    "default": "",
+                    "example": "string"
+                },
+                "adverEquityCartPrice": {
+                    "type": "string",
+                    "description": "购物车刊例价",
+                    "default": "",
+                    "example": "string"
+                },
+                "adverEquityLinkPrice": {
+                    "type": "string",
+                    "description": "链接渠道价",
+                    "default": "",
+                    "example": "string"
+                },
+                "adverLivePrice": {
+                    "type": "string",
+                    "description": "直播刊例价",
+                    "default": "",
+                    "example": "string"
+                },
+                "adverVideoPrice": {
+                    "type": "string",
+                    "description": "短视频刊例价",
+                    "default": "",
+                    "example": "string"
+                },
+                "city": {
+                    "type": "string",
+                    "description": "市",
+                    "default": "",
+                    "example": "string"
+                },
+                "distEquityCartPrice": {
+                    "type": "string",
+                    "description": "购物车渠道价",
+                    "default": "",
+                    "example": "string"
+                },
+                "distEquityLinkPrice": {
+                    "type": "string",
+                    "description": "链接渠道价",
+                    "default": "",
+                    "example": "string"
+                },
+                "distLivePrice": {
+                    "type": "string",
+                    "description": "直播渠道价",
+                    "default": "",
+                    "example": "string"
+                },
+                "distTags": {
+                    "type": "string",
+                    "description": "渠道标签",
+                    "default": "",
+                    "example": "string"
+                },
+                "distVideoPrice": {
+                    "type": "string",
+                    "description": "短视频渠道价",
+                    "default": "",
+                    "example": "string"
+                },
+                "distVideoPriceDown": {
+                    "type": "string",
+                    "description": "短视频渠道价是否降价",
+                    "default": "",
+                    "example": "string"
+                },
+                "distVideoPriceMsg": {
+                    "type": "string",
+                    "description": "短视频渠道降价信息",
+                    "default": "",
+                    "example": "string"
+                },
+                "fansAge": {
+                    "type": "string",
+                    "description": "粉丝年龄区间",
+                    "default": "",
+                    "example": "string"
+                },
+                "fansLocation": {
+                    "type": "string",
+                    "description": "粉丝地域区间",
+                    "default": "",
+                    "example": "string"
+                },
+                "gender": {
+                    "type": "string",
+                    "description": "性别",
+                    "default": "",
+                    "example": "string"
+                },
+                "isFollow": {
+                    "type": "string",
+                    "description": "是否是关注账号",
+                    "default": "",
+                    "example": "string"
+                },
+                "isSelection": {
+                    "type": "string",
+                    "description": "是否已选中账号",
+                    "default": "",
+                    "example": "string"
+                },
+                "isServiceUser": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "isVa": {
+                    "type": "string",
+                    "description": "是否是虚拟自媒体主",
+                    "default": "",
+                    "example": "string"
+                },
+                "klrIndex": {
+                    "type": "string",
+                    "description": "克劳锐指数",
+                    "default": "",
+                    "example": "string"
+                },
+                "ksCommentScore": {
+                    "type": "string",
+                    "description": "综合评分",
+                    "default": "",
+                    "example": "string"
+                },
+                "ksInteractInc": {
+                    "type": "string",
+                    "description": "昨日互动量",
+                    "default": "",
+                    "example": "string"
+                },
+                "ksLiveCpe": {
+                    "type": "string",
+                    "description": "直播预计CPE",
+                    "default": "",
+                    "example": "string"
+                },
+                "ksLiveCpm": {
+                    "type": "string",
+                    "description": "直播预计CPM",
+                    "default": "",
+                    "example": "string"
+                },
+                "ksLiveMedianCommentcnt": {
+                    "type": "string",
+                    "description": "直播中位评论数",
+                    "default": "",
+                    "example": "string"
+                },
+                "ksLiveMedianInteractcnt": {
+                    "type": "string",
+                    "description": "直播中位互动数",
+                    "default": "",
+                    "example": "string"
+                },
+                "ksLiveMedianLikecnt": {
+                    "type": "string",
+                    "description": "直播中位点赞数",
+                    "default": "",
+                    "example": "string"
+                },
+                "ksLiveMedianPeakcnt": {
+                    "type": "string",
+                    "description": "直播中位最高在线人数",
+                    "default": "",
+                    "example": "string"
+                },
+                "ksLiveMedianViewcnt": {
+                    "type": "string",
+                    "description": "直播中位观看数",
+                    "default": "",
+                    "example": "string"
+                },
+                "ksLiveTimes": {
+                    "type": "string",
+                    "description": "直播时段",
+                    "default": "",
+                    "example": "string"
+                },
+                "ksWorksCpe": {
+                    "type": "string",
+                    "description": "短视频预计CPE",
+                    "default": "",
+                    "example": "string"
+                },
+                "ksWorksCpm": {
+                    "type": "string",
+                    "description": "短视频预计CPM",
+                    "default": "",
+                    "example": "string"
+                },
+                "ksWorksMedianCommentcnt": {
+                    "type": "string",
+                    "description": "短视频平均评论数",
+                    "default": "",
+                    "example": "string"
+                },
+                "ksWorksMedianForwardcnt": {
+                    "type": "string",
+                    "description": "短视频平均分享数",
+                    "default": "",
+                    "example": "string"
+                },
+                "ksWorksMedianInteractcnt": {
+                    "type": "string",
+                    "description": "短视频平均互动数",
+                    "default": "",
+                    "example": "string"
+                },
+                "ksWorksMedianLikecnt": {
+                    "type": "string",
+                    "description": "短视频平均点赞数",
+                    "default": "",
+                    "example": "string"
+                },
+                "ksWorksMedianViewcnt": {
+                    "type": "string",
+                    "description": "短视频平均播放数",
+                    "default": "",
+                    "example": "string"
+                },
+                "lockPrice": {
+                    "type": "string",
+                    "description": "锁价价格项",
+                    "default": "",
+                    "example": "string"
+                },
+                "lockPriceTime": {
+                    "type": "string",
+                    "description": "锁价时间",
+                    "default": "",
+                    "example": "string"
+                },
+                "maleRateDes": {
+                    "type": "string",
+                    "description": "男粉丝占比详情",
+                    "default": "",
+                    "example": "string"
+                },
+                "mcnName": {
+                    "type": "string",
+                    "description": "MCN机构名称",
+                    "default": "",
+                    "example": "string"
+                },
+                "platClass": {
+                    "type": "string",
+                    "description": "擅长领域",
+                    "default": "",
+                    "example": "string"
+                },
+                "priceServiceFee": {
+                    "type": "string",
+                    "description": "服务费",
+                    "default": "",
+                    "example": "string"
+                },
+                "province": {
+                    "type": "string",
+                    "description": "省",
+                    "default": "",
+                    "example": "string"
+                },
+                "serviceLivePrice": {
+                    "type": "string",
+                    "description": "直播(服务费)",
+                    "default": "",
+                    "example": "string"
+                },
+                "serviceVideoPrice": {
+                    "type": "string",
+                    "description": "短视频(服务费)",
+                    "default": "",
+                    "example": "string"
+                },
+                "shareId": {
+                    "type": "string",
+                    "description": "分享页id",
+                    "default": "",
+                    "example": "string"
+                },
+                "shareLink": {
+                    "type": "string",
+                    "description": "分享页链接",
+                    "default": "",
+                    "example": "string"
+                },
+                "timeLimitDiscount": {
+                    "type": "string",
+                    "description": "限时特惠表示",
+                    "default": "",
+                    "example": "string"
+                },
+                "type": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "videoPriceLockIcon": {
+                    "type": "string",
+                    "description": "锁价标识",
+                    "default": "",
+                    "example": "string"
+                },
+                "videoPriceLockTime": {
+                    "type": "string",
+                    "description": "锁价时间",
+                    "default": "",
+                    "example": "string"
+                },
+                "mcnSupplierName": {
+                    "type": "string",
+                    "description": "机构简称",
+                    "default": "",
+                    "example": "string"
+                }
+            }
+        },
+        "KwaiMediaListPostResponse200": {
+            "properties": {
+                "data": {
+                    "type": "array",
+                    "description": "",
+                    "items": {
+                        "$ref": "#/definitions/KwaiMediaListPostResponse200Data"
+                    }
+                },
+                "page": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "limit": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "total": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "agentId": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                }
+            }
+        },
+        "PostBiliMediaList": {
+            "type": "object",
+            "properties": {
+                "platType": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "报价类型"
+                },
+                "mediaId": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "资源id"
+                },
+                "accountTag": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "内容分类"
+                },
+                "followerMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "粉丝数量最小值"
+                },
+                "followerMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "粉丝数量最大值"
+                },
+                "priceMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "报价-最小"
+                },
+                "priceMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "报价-最大"
+                },
+                "customCpmMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "cpm"
+                },
+                "customCpmMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "cpm"
+                },
+                "customCpeMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "cpe"
+                },
+                "customCpeMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "cpe"
+                },
+                "avgPlayNumMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "平均播放量-最小"
+                },
+                "avgPlayNumMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "平均播放量-最大"
+                },
+                "cpmMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "(预计CPM)千人浏览成本-最小"
+                },
+                "cpmMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "(预计CPM)千人浏览成本-最大"
+                },
+                "cpeMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "(预计CPE)用户互动计费-最小"
+                },
+                "cpeMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "(预计CPE)用户互动计费-最大"
+                },
+                "follow": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "是否只看关注账号(1、为是,0或者不传为不按此条件搜索)"
+                },
+                "platClass": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "擅长领域"
+                },
+                "avgCommentNumMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "平均评论数-最小"
+                },
+                "avgCommentNumMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "平均评论数-最大"
+                },
+                "avgAttitudeNumMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "平均点赞量-最小"
+                },
+                "avgAttitudeNumMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "平均点赞量-最大"
+                },
+                "avgBarrageNumMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "平均弹幕量-最小"
+                },
+                "avgBarrageNumMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "平均弹幕量-最大"
+                },
+                "ratioMin": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "账号男性比例最小值"
+                },
+                "ratioMax": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "账号男性比例最大值"
+                },
+                "fansAge": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "粉丝年龄"
+                },
+                "fansLocation": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "粉丝地域"
+                },
+                "gender": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "达人性别"
+                },
+                "province": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "达人地域"
+                },
+                "accountFollowers": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "是否按粉丝数量排序(1、倒序，0或者不传为不按价格排序）"
+                },
+                "price": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "报价"
+                },
+                "upperType": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "签约状态"
+                },
+                "nick": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "昵称"
+                },
+                "lockType": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "保价红人类型"
+                },
+                "play": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "播放量"
+                },
+                "interact": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "互动量排序"
+                },
+                "type": {
+                    "type": "string",
+                    "example": "string",
+                    "description": "1 植入视频(默认) 2 定制视频"
+                },
+                "followMediaId": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                },
+                "ownerId": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                },
+                "channelId": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                },
+                "newOrderProcess": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                },
+                "userLabel": {
+                    "type": "string",
+                    "example": "string",
+                    "description": ""
+                }
+            }
+        },
+        "BiliMediaListPostResponse200Data": {
+            "properties": {
+                "platType": {
+                    "type": "string",
+                    "description": "平台类型",
+                    "default": "",
+                    "example": "string"
+                },
+                "mediaId": {
+                    "type": "string",
+                    "description": "账号唯一标识",
+                    "default": "",
+                    "example": "string"
+                },
+                "accountUid": {
+                    "type": "string",
+                    "description": "账号uid",
+                    "default": "",
+                    "example": "string"
+                },
+                "accountName": {
+                    "type": "string",
+                    "description": "账号名称",
+                    "default": "",
+                    "example": "string"
+                },
+                "accountClass": {
+                    "type": "string",
+                    "description": "帐号分类",
+                    "default": "",
+                    "example": "string"
+                },
+                "avatar": {
+                    "type": "string",
+                    "description": "头像",
+                    "default": "",
+                    "example": "string"
+                },
+                "accountFollowers": {
+                    "type": "string",
+                    "description": "粉丝数量",
+                    "default": "",
+                    "example": "string"
+                },
+                "city": {
+                    "type": "string",
+                    "description": "市",
+                    "default": "",
+                    "example": "string"
+                },
+                "fansAge": {
+                    "type": "string",
+                    "description": "粉丝年龄区间",
+                    "default": "",
+                    "example": "string"
+                },
+                "fansLocation": {
+                    "type": "string",
+                    "description": "粉丝地域区间",
+                    "default": "",
+                    "example": "string"
+                },
+                "gender": {
+                    "type": "string",
+                    "description": "性别",
+                    "default": "",
+                    "example": "string"
+                },
+                "isFollow": {
+                    "type": "string",
+                    "description": "是否是关注账号",
+                    "default": "",
+                    "example": "string"
+                },
+                "isSelection": {
+                    "type": "string",
+                    "description": "是否已选中账号",
+                    "default": "",
+                    "example": "string"
+                },
+                "lockPrice": {
+                    "type": "string",
+                    "description": "锁价价格项",
+                    "default": "",
+                    "example": "string"
+                },
+                "lockPriceTime": {
+                    "type": "string",
+                    "description": "锁价时间",
+                    "default": "",
+                    "example": "string"
+                },
+                "weiqUserId": {
+                    "type": "string",
+                    "description": "weiq账户id",
+                    "default": "",
+                    "example": "string"
+                },
+                "implantPriceLockIcon": {
+                    "type": "string",
+                    "description": "植入视频 锁价标识",
+                    "default": "",
+                    "example": "string"
+                },
+                "implantPriceLockTime": {
+                    "type": "string",
+                    "description": "植入视频 锁价时间",
+                    "default": "",
+                    "example": "string"
+                },
+                "profileUrl": {
+                    "type": "string",
+                    "description": "个人主页",
+                    "default": "",
+                    "example": "string"
+                },
+                "partitionOne": {
+                    "type": "string",
+                    "description": "内容分区（一级分区）",
+                    "default": "",
+                    "example": "string"
+                },
+                "maleRate": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "maleRateDes": {
+                    "type": "string",
+                    "description": "男粉丝占比详情",
+                    "default": "",
+                    "example": "string"
+                },
+                "province": {
+                    "type": "string",
+                    "description": "省",
+                    "default": "",
+                    "example": "string"
+                },
+                "type": {
+                    "type": "string",
+                    "description": "1 植入视频 2 定制视频",
+                    "default": "",
+                    "example": "string"
+                },
+                "avgAttitudeNum": {
+                    "type": "string",
+                    "description": "平均点赞数",
+                    "default": "",
+                    "example": "string"
+                },
+                "avgCollectNum": {
+                    "type": "string",
+                    "description": "平均收藏数",
+                    "default": "",
+                    "example": "string"
+                },
+                "avgCommentNum": {
+                    "type": "string",
+                    "description": "平均评论数",
+                    "default": "",
+                    "example": "string"
+                },
+                "avgLiveCommentNum": {
+                    "type": "string",
+                    "description": "平均弹幕数",
+                    "default": "",
+                    "example": "string"
+                },
+                "avgPlayNum": {
+                    "type": "string",
+                    "description": "平均播放数",
+                    "default": "",
+                    "example": "string"
+                },
+                "biliAvgInteractNum": {
+                    "type": "string",
+                    "description": "平均互动数",
+                    "default": "",
+                    "example": "string"
+                },
+                "customCpe": {
+                    "type": "string",
+                    "description": "定制视频cpe",
+                    "default": "",
+                    "example": "string"
+                },
+                "customCpm": {
+                    "type": "string",
+                    "description": "定制视频cpm",
+                    "default": "",
+                    "example": "string"
+                },
+                "customPriceLockIcon": {
+                    "type": "string",
+                    "description": "定制视频 锁价标识",
+                    "default": "",
+                    "example": "string"
+                },
+                "customPriceLockTime": {
+                    "type": "string",
+                    "description": "定制视频 锁价时间",
+                    "default": "",
+                    "example": "string"
+                },
+                "distCustomPrice": {
+                    "type": "string",
+                    "description": "定制视频渠道价",
+                    "default": "",
+                    "example": "string"
+                },
+                "distImplantPrice": {
+                    "type": "string",
+                    "description": "植入视频渠道价",
+                    "default": "",
+                    "example": "string"
+                },
+                "totalFansLocationData": {
+                    "type": "string",
+                    "description": "粉丝地域",
+                    "default": "",
+                    "example": "string"
+                },
+                "upperType": {
+                    "type": "string",
+                    "description": "签约状态",
+                    "default": "",
+                    "example": "string"
+                },
+                "adverCustomPrice": {
+                    "type": "string",
+                    "description": "定制视频刊例价",
+                    "default": "",
+                    "example": "string"
+                },
+                "adverImplantPrice": {
+                    "type": "string",
+                    "description": "植入视频刊例价",
+                    "default": "",
+                    "example": "string"
+                }
+            }
+        },
+        "BiliMediaListPostResponse200": {
+            "properties": {
+                "data": {
+                    "type": "array",
+                    "description": "",
+                    "items": {
+                        "$ref": "#/definitions/BiliMediaListPostResponse200Data"
+                    }
+                },
+                "page": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "limit": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "total": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                },
+                "agentId": {
+                    "type": "string",
+                    "description": "",
+                    "default": "",
+                    "example": "string"
+                }
+            }
+        }
+    },
+    "paths": {
+        "/account/allFansTrend": {
+            "post": {
+                "tags": [
+                    "资源通用功能相关接口"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "AccountAllFansTrendPOST",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/PostAccountAllFansTrend"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "请求成功",
+                        "schema": {
+                            "$ref": "#/definitions/AccountAllFansTrendPostResponse200"
+                        }
+                    }
+                },
+                "consumes": [
+                    "application/json"
+                ]
+            }
+        },
+        "/weibo/mediaList": {
+            "post": {
+                "tags": [
+                    "资源微博渠道相关接口"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "WeiboMediaListPOST",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/PostWeiboMediaList"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "4000": {
+                        "description": "参数错误"
+                    },
+                    "200": {
+                        "description": "请求成功",
+                        "schema": {
+                            "$ref": "#/definitions/WeiboMediaListPostResponse200"
+                        }
+                    }
+                },
+                "consumes": [
+                    "application/json"
+                ]
+            }
+        },
+        "/wechat/mediaList": {
+            "post": {
+                "tags": [
+                    "资源微信渠道相关接口"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "WechatMediaListPOST",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/PostWechatMediaList"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "请求成功",
+                        "schema": {
+                            "$ref": "#/definitions/WechatMediaListPostResponse200"
+                        }
+                    }
+                },
+                "consumes": [
+                    "application/json"
+                ]
+            }
+        },
+        "/tiktok/mediaList": {
+            "post": {
+                "tags": [
+                    "资源抖音渠道相关接口"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "TiktokMediaListPOST",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/PostTiktokMediaList"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "请求成功",
+                        "schema": {
+                            "$ref": "#/definitions/TiktokMediaListPostResponse200"
+                        }
+                    }
+                },
+                "consumes": [
+                    "application/json"
+                ]
+            }
+        },
+        "/redbook/mediaList": {
+            "post": {
+                "tags": [
+                    "资源小红书渠道相关接口"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "RedbookMediaListPOST",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/PostRedbookMediaList"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "请求成功",
+                        "schema": {
+                            "$ref": "#/definitions/RedbookMediaListPostResponse200"
+                        }
+                    }
+                },
+                "consumes": [
+                    "application/json"
+                ]
+            }
+        },
+        "/kwai/mediaList": {
+            "post": {
+                "tags": [
+                    "资源快手渠道相关接口"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "KwaiMediaListPOST",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/PostKwaiMediaList"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "请求成功",
+                        "schema": {
+                            "$ref": "#/definitions/KwaiMediaListPostResponse200"
+                        }
+                    }
+                },
+                "consumes": [
+                    "application/json"
+                ]
+            }
+        },
+        "/bili/mediaList": {
+            "post": {
+                "tags": [
+                    "资源B站渠道相关接口"
+                ],
+                "summary": "",
+                "description": "",
+                "operationId": "BiliMediaListPOST",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body",
+                        "required": false,
+                        "schema": {
+                            "$ref": "#/definitions/PostBiliMediaList"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "请求成功",
+                        "schema": {
+                            "$ref": "#/definitions/BiliMediaListPostResponse200"
+                        }
+                    }
+                },
+                "consumes": [
+                    "application/json"
+                ]
+            }
+        }
+    }
+}
