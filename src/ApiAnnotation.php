@@ -27,9 +27,6 @@ class ApiAnnotation
         if(!empty($route) && $requestMethod == "POST") {
             $methodAnnotations[] = new PostApi(['path' => $route]);
         }
-        if(!empty($route) && $requestMethod == "GET") {
-            $methodAnnotations[] = new GetApi(['path' => $route]);
-        }
         if(!empty($request)) {
             $methodAnnotations[] = new Body(['rules' => $request]);
         }
@@ -96,8 +93,8 @@ class ApiAnnotation
             if(strpos($code, "//") && strpos($code, "public") && strpos($code, ";")){
                 $codeLineInfo = explode("//", $code);
                 $key = $codeLineInfo[0];
-                $key = preg_replace(['/public/','/= 0/','/=0/','/,/','/\$/','/ /','/;/',"/'/",'/"/','/=/','/array\(\)/'],'',$key);
-                $codeAndAnnotation[$key] = trim($codeLineInfo[1]);
+                $key = preg_replace(['/=(.*);/','/public/','/,/','/\$/','/ /','/;/',"/'/",'/"/','/=/','/array\(\)/'],'',$key);
+                $codeAndAnnotation[$key] = trim($codeLineInfo[count($codeLineInfo)-1]);
             }
         }
         return $codeAndAnnotation;
