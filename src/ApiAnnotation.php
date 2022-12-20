@@ -71,9 +71,22 @@ class ApiAnnotation
         $class = new \ReflectionClass($className);
         $propertyAnnotation = self::getPropertyAnnotation($className);
         foreach ($class->getProperties(\ReflectionProperty::IS_PUBLIC) as $property) {
+            $propertyValue = '';
             $docComment = isset($propertyAnnotation[$property->getName()])?$propertyAnnotation[$property->getName()]:'';
             $keyString = $property->getName().'|'.($property->getDocComment()?:$docComment);
-            $argument[$keyString] = "";
+            if(!empty($property->getDefaultValue())){
+                $propertyValue = $property->getDefaultValue();
+            }else if(!empty($property->getType())){
+                if($property->getType()->getName() == 'int'){
+                    var_dump($keyString);
+                    $propertyValue = 0;
+                } else{
+                    $propertyValue = '';
+                }
+            } else{
+                $propertyValue = '';
+            }
+            $argument[$keyString] = $propertyValue;
             foreach ($annotationCollector as $propertyInfo){
                 if(isset($propertyInfo['annotation']->className) && class_exists($propertyInfo['annotation']->className)
                     && $propertyInfo['class'] == $className && $propertyInfo['property'] == $property->getName()){
@@ -93,7 +106,7 @@ class ApiAnnotation
             if(strpos($code, "//") && strpos($code, "public") && strpos($code, ";")){
                 $codeLineInfo = explode("//", $code);
                 $key = $codeLineInfo[0];
-                $key = preg_replace(['/=(.*);/','/public/','/,/','/\$/','/ /','/;/',"/'/",'/"/','/=/','/array\(\)/'],'',$key);
+                $key = preg_replace(['/=(.*);/','/ string/','/ int/','/public/','/,/','/\$/','/ /','/;/',"/'/",'/"/','/=/','/array\(\)/'],'',$key);
                 $codeAndAnnotation[$key] = trim($codeLineInfo[count($codeLineInfo)-1]);
             }
         }

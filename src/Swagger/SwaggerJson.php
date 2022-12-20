@@ -141,7 +141,7 @@ class SwaggerJson
 
     public function getTypeByRule($rule)
     {
-        $default = explode('|', preg_replace('/\[.*\]/', '', $rule));
+        $default = explode('|', preg_replace('/\[.*\]/', '', (string)$rule));
 
         if (array_intersect($default, ['int', 'lt', 'gt', 'ge', 'integer'])) {
             return 'integer';
@@ -363,7 +363,7 @@ class SwaggerJson
         foreach ($schemaContent as $keyString => $val) {
             $property = [];
             $property['type'] = gettype($val);
-            if (in_array($property['type'], ['double', 'float'])) {
+            if (in_array($property['type'], ['int', 'double', 'float'])) {
                 $property['type'] = 'number';
             }
             $keyArray = explode('|', $keyString);
@@ -503,7 +503,7 @@ class SwaggerJson
             } else {
                 $type = $this->getTypeByRule($rule);
                 if ($type === 'string') {
-                    in_array('required', explode('|', $rule)) && $schema['required'][] = $fieldName;
+                    in_array('required', explode('|', (string)$rule)) && $schema['required'][] = $fieldName;
                 }
                 if ($type == 'array') {
                     $property['$ref'] = '#/definitions/ModelArray';
@@ -513,9 +513,12 @@ class SwaggerJson
                 }
             }
             if ($type !== null) {
-                $property['type'] = $type;
+                $property['type'] = gettype($rule);
+                if(!empty($rule)) {
+                    $property['default'] = $rule;
+                }
                 if (! in_array($type, ['array', 'object'])) {
-                    $property['example'] = $type;
+                    $property['example'] = $rule;
                 }
             }
             $property['description'] = $fieldNameLabel[1] ?? '';
