@@ -78,7 +78,6 @@ class ApiAnnotation
                 $propertyValue = $property->getDefaultValue();
             }else if(!empty($property->getType())){
                 if($property->getType()->getName() == 'int'){
-                    var_dump($keyString);
                     $propertyValue = 0;
                 } else{
                     $propertyValue = '';
@@ -106,7 +105,7 @@ class ApiAnnotation
             if(strpos($code, "//") && strpos($code, "public") && strpos($code, ";")){
                 $codeLineInfo = explode("//", $code);
                 $key = $codeLineInfo[0];
-                $key = preg_replace(['/=(.*);/','/ string/','/ int/','/public/','/,/','/\$/','/ /','/;/',"/'/",'/"/','/=/','/array\(\)/'],'',$key);
+                $key = preg_replace(['/=(.*);/','/string/','/int/','/public/','/,/','/\$/','/ /','/;/',"/'/",'/"/','/=/','/array\(\)/','/null\|/'],'',$key);
                 $codeAndAnnotation[$key] = trim($codeLineInfo[count($codeLineInfo)-1]);
             }
         }
